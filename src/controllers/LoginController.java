@@ -4,6 +4,7 @@ package controllers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import models.User;
 import views.FrmLogin;
 
 public class LoginController implements ActionListener  {
@@ -19,10 +20,17 @@ public class LoginController implements ActionListener  {
     // Method
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.frmLogin.BtnStart) {
-            validate();
+            if (validate()) {
+                // Crear el objeto usuario para enviar al modelo
+                User u = new User(this.frmLogin.TxtUsername.getText(), String.valueOf(this.frmLogin.TxtPassword.getPassword()));
+                // Verificar datos de acceso en la base de datos
+                
+            }
+
         }
     }
     
+    // Method for validate data
     public boolean validate() {
         if (this.frmLogin.TxtUsername.getText().equals("")) {
             JOptionPane.showMessageDialog(frmLogin, "El usuario no cumple las políticas establecidas.");
