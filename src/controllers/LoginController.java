@@ -4,8 +4,10 @@ package controllers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import models.LoginModel;
 import models.User;
 import views.FrmLogin;
+import views.FrmPanel;
 
 public class LoginController implements ActionListener  {
     // Attribute
@@ -23,8 +25,18 @@ public class LoginController implements ActionListener  {
             if (validate()) {
                 // Crear el objeto usuario para enviar al modelo
                 User u = new User(this.frmLogin.TxtUsername.getText(), String.valueOf(this.frmLogin.TxtPassword.getPassword()));
-                // Verificar datos de acceso en la base de datos
                 
+                // Verificar datos de acceso en la base de datos
+                LoginModel lgn = new LoginModel();
+                if (lgn.validateLogin() == 1) {
+                    FrmPanel frmPanel = new FrmPanel();
+                    PanelController panel = new PanelController();
+                    frmPanel.setVisible(true);
+                    frmPanel.setLocationRelativeTo(frmLogin);
+                    frmLogin.dispose();
+                } else {
+                    JOptionPane.showMessageDialog(frmLogin, "Datos de acceso inválidos.");
+                }
             }
 
         }
