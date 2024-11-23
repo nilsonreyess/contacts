@@ -30,7 +30,7 @@ public class LoginController implements ActionListener  {
                 LoginModel lgn = new LoginModel();
                 if (lgn.validateUser(u)) {
                     FrmPanel frmPanel = new FrmPanel();
-                    PanelController panel = new PanelController();
+                    PanelController panel = new PanelController(frmPanel);
                     frmPanel.LblUsername.setText("Usuario: " + this.frmLogin.TxtUsername.getText());
                     frmPanel.setVisible(true);
                     frmPanel.setLocationRelativeTo(frmLogin);
