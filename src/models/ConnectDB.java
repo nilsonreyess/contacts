@@ -11,7 +11,7 @@ public class ConnectDB {
     public final String URLDB = "jdbc:mysql://localhost:3306/";
     public final String USERDB = "root";
     public final String PASSDB = "";
-    public final String DBNAME = "contacts";
+    public final String DBNAME = "contacs";
     Connection dbConnection;
 
     public Connection getConnection() {

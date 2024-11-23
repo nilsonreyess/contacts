@@ -28,9 +28,10 @@ public class LoginController implements ActionListener  {
                 
                 // Verificar datos de acceso en la base de datos
                 LoginModel lgn = new LoginModel();
-                if (lgn.validateLogin() == 1) {
+                if (lgn.validateUser(u)) {
                     FrmPanel frmPanel = new FrmPanel();
                     PanelController panel = new PanelController();
+                    frmPanel.LblUsername.setText("Usuario: " + this.frmLogin.TxtUsername.getText());
                     frmPanel.setVisible(true);
                     frmPanel.setLocationRelativeTo(frmLogin);
                     frmLogin.dispose();
