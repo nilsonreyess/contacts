@@ -36,7 +36,7 @@ public class FrmStart extends javax.swing.JFrame {
         MnuFile = new javax.swing.JMenu();
         MnuLogout = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Gestión de contactos");
         setResizable(false);
 
