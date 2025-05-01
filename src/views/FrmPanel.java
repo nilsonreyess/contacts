@@ -103,7 +103,7 @@ public class FrmPanel extends javax.swing.JFrame {
     private javax.swing.JLabel LblTitle;
     public javax.swing.JLabel LblUsername;
     private javax.swing.JMenu MnuContacts;
-    private javax.swing.JMenu MnuFile;
+    public javax.swing.JMenu MnuFile;
     public javax.swing.JMenuItem MnuListContacts;
     public javax.swing.JMenuItem MnuLogout;
     public javax.swing.JMenuItem MnuUsers;

@@ -84,7 +84,7 @@ public class FrmStart extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TblShow);
 
-        LblConnect.setText("Conexión: ");
+        LblConnect.setText("Usuario: ");
 
         LblIdContact.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         LblIdContact.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -209,7 +209,7 @@ public class FrmStart extends javax.swing.JFrame {
     private javax.swing.JButton BtnDelete;
     private javax.swing.JButton BtnSave;
     private javax.swing.JButton BtnUpdate;
-    private javax.swing.JLabel LblConnect;
+    public javax.swing.JLabel LblConnect;
     private javax.swing.JLabel LblDocument;
     private javax.swing.JLabel LblEmail;
     private javax.swing.JLabel LblFullname;

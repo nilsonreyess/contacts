@@ -304,8 +304,11 @@
     </Component>
     <Component class="javax.swing.JLabel" name="LblConnect">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Conexi&#xf3;n: "/>
+        <Property name="text" type="java.lang.String" value="Usuario: "/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="LblIdContact">
       <Properties>
