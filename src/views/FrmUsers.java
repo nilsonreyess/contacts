@@ -1,9 +1,9 @@
 
 package views;
 
-public class FrmStart extends javax.swing.JFrame {
+public class FrmUsers extends javax.swing.JFrame {
 
-    public FrmStart() {
+    public FrmUsers() {
         initComponents();
     }
 
@@ -29,10 +29,10 @@ public class FrmStart extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         TblShow = new javax.swing.JTable();
         jSeparator4 = new javax.swing.JSeparator();
-        LblConnect = new javax.swing.JLabel();
+        LblUsername = new javax.swing.JLabel();
         LblIdContact = new javax.swing.JLabel();
         BtnCancel = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        LblConected = new javax.swing.JLabel();
         MnuMain = new javax.swing.JMenuBar();
         MnuFile = new javax.swing.JMenu();
         MnuLogout = new javax.swing.JMenuItem();
@@ -43,7 +43,7 @@ public class FrmStart extends javax.swing.JFrame {
 
         LblTitle.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         LblTitle.setForeground(new java.awt.Color(0, 204, 0));
-        LblTitle.setText("Sistema de gestión de contactos");
+        LblTitle.setText("Sistema de gestión de usuarios");
 
         LblDocument.setText("Documento: ");
 
@@ -85,7 +85,8 @@ public class FrmStart extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TblShow);
 
-        LblConnect.setText("Usuario: ");
+        LblUsername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        LblUsername.setText("Usuario: ");
 
         LblIdContact.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         LblIdContact.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -95,11 +96,11 @@ public class FrmStart extends javax.swing.JFrame {
         BtnCancel.setText("Cancelar");
         BtnCancel.setEnabled(false);
 
-        jLabel1.setText("Conected: OK");
+        LblConected.setText("Conected: OK");
 
         MnuFile.setText("Archivo");
 
-        MnuLogout.setText("Salir");
+        MnuLogout.setText("Cerrar");
         MnuFile.add(MnuLogout);
 
         MnuMain.add(MnuFile);
@@ -158,10 +159,10 @@ public class FrmStart extends javax.swing.JFrame {
                 .addGap(12, 12, 12))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LblConected, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(LblConnect)
-                .addGap(93, 93, 93))
+                .addComponent(LblUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,8 +203,8 @@ public class FrmStart extends javax.swing.JFrame {
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LblConnect)
-                    .addComponent(jLabel1))
+                    .addComponent(LblUsername)
+                    .addComponent(LblConected))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -216,22 +217,22 @@ public class FrmStart extends javax.swing.JFrame {
     private javax.swing.JButton BtnDelete;
     private javax.swing.JButton BtnSave;
     private javax.swing.JButton BtnUpdate;
-    public javax.swing.JLabel LblConnect;
+    public javax.swing.JLabel LblConected;
     private javax.swing.JLabel LblDocument;
     private javax.swing.JLabel LblEmail;
     private javax.swing.JLabel LblFullname;
     private javax.swing.JLabel LblIdContact;
     private javax.swing.JLabel LblSmartphone;
     private javax.swing.JLabel LblTitle;
+    public javax.swing.JLabel LblUsername;
     private javax.swing.JMenu MnuFile;
-    private javax.swing.JMenuItem MnuLogout;
+    public javax.swing.JMenuItem MnuLogout;
     private javax.swing.JMenuBar MnuMain;
     public javax.swing.JTable TblShow;
     private javax.swing.JTextField TxtDocument;
     private javax.swing.JTextField TxtEmail;
     private javax.swing.JTextField TxtFullname;
     private javax.swing.JTextField TxtSmartphone;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;

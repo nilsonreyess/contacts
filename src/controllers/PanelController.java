@@ -5,10 +5,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import javax.swing.JOptionPane;
 import views.FrmMain;
 import views.FrmPanel;
 import views.FrmStart;
+import views.FrmUsers;
 
 public class PanelController implements ActionListener   {
     // Attribute
@@ -18,6 +18,17 @@ public class PanelController implements ActionListener   {
    public PanelController(FrmPanel frm) {
         this.frmPanel = frm;
         
+        this.frmPanel.MnuUsers.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mousePressed(MouseEvent e) {
+                FrmUsers frmUsers = new FrmUsers();
+                UsersController usersController = new UsersController(frmUsers);
+                frmUsers.LblConected.setText("Conected: OK");
+                frmUsers.LblUsername.setText(frmPanel.LblUsername.getText());
+                frmUsers.setVisible(true);
+                frmUsers.setLocationRelativeTo(frmPanel);
+            }
+        });
         this.frmPanel.MnuLogout.addMouseListener(new MouseAdapter(){
             @Override
             public void mousePressed(MouseEvent e) {
